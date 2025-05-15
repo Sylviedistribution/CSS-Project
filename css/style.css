@@ -1,92 +1,163 @@
 *{
-background-color: whitesmoke;
-}
-
-a{
     text-decoration: none;
+    margin: 0;
+}
+body{
+        background-color: var(--primary-color);
 
 }
+:root{
+    --primary-color: #00353F;
+    --secondary-color: #4A919E;
+    --aqua: #68afcb;
+    --violet: #7e76b3;
+    --tomate: #e28e87;
+    --sable: #deb690;
+    --bluette: #7f98cf;
+    --herbe: #73a18f;}
+
 
 h1 {
     text-align: center;
 }
 
-header, header * {
-    background-color: bisque;
+/*HEADER*/
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-footer, footer * {
-    background-color: bisque;
-}
-
-header ul{
-   list-style-type: none;
-   display: flex;
-}
-
-header a{
-    font-size:20px;
-    margin: 20px;
-    color:black
-}
-
-header a:hover{
-    transition: all 0.2s ease-out;
-    color:white;
-    text-decoration: underline;
-}
-
-#goTop{
-    width: 10%;
-}
-
-footer section{
-    display: flex;
-    justify-content: space-around;
-}
-
-footer>p{
-text-align: center;
-}
-
-#topButton{
+    background-color: var(--secondary-color);
     position: fixed;
-    bottom: 20px; /* Distance du haut */
-    right: 20px; /* Distance de la droite */
-    font-size: 30px;
+    height: 10vh;
+    box-shadow: 0 1px 5px black; /*x y flou color*/
+    position: absolute;
+}
+
+header img{
+    width: 10px;
+    height: 55px;
+    margin: 5px 5px;
+    background-color: transparent;
+    position:absolute;
+}
+
+.navbar{
+    background-color: transparent;
+    margin: auto;
+
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+ }
+ 
+ .navbar a{
+     font-size:20px;
+     margin: 50px;
+     color:black
+ }
+ 
+ .navbar a:hover{
+     transition: all 0.2s ease-out;
+     color:white;
+     text-decoration: underline;
+ }
+ 
+
+/*INDEX*/
+.about{
+    height: 90vh;
+    color: white;
+    font-size: 20px;
+}
+
+.intro-container p:first-child{
+    animation: appear1 0.8s ease-in forwards, bounce 2s linear 1s infinite;
+    margin-left: 20px;
+}
+
+@keyframes appear1 {
+   from {
+    transform: translateX(-100px);
+  }
+  to{
+    transform: translateX(0);
+  }
     
+}
+
+.intro-container p:last-child{
+    animation: appear2 0.8s ease-in forwards;
+    text-align: right;
+    margin-right: 20px;
+
 
 }
 
-#presentation{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 10px 10px 0 10px;
+@keyframes appear2 {
+   from {
+    transform: translateX(100px);
+  }
+  to{
+    transform: translateX(0);
+  }
+    
 }
 
-.contact{
+@keyframes bounce {
+   0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+    
+}
+
+.my_picture{
+    width: 50%;
+    height: 80vh;
+    background-image: url("/media/my_picture.png");
+    background-size: cover;
+    animation: glitch 1s ease-in-out 2s infinite;
+
+}
+
+
+@keyframes glitch {
+  0%{
+    background-image: url("/media/my_picture.png");
+  }
+  25% {
+    background-image: url("/media/my_picture_glitch01.png");
+
+  }
+  50% {
+        background-image: url("/media/my_picture_glitch02.png");
+
+  }
+  75% {
+        background-image: url("/media/my_picture_glitch03.png");
+
+  }
+
+   100% {
+        background-image: url("/media/my_picture_glitch01.png");
+
+  }
+  
+ 
+
+}
+.intro-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
 }
 
-#skills{
-    display: flex;
-    justify-content: center;
-}
-
-#skills table{
-    margin: 50px;
-}
-
-#Hobbies{
-    background-color: #f4f4f9;
-    text-align: center;
-}
 
 .card{
     width: 300px;
@@ -111,6 +182,24 @@ text-align: center;
     width: 100%;
     height: 100%;
     object-fit:fill; /* Remplit la div en rognant l’image */
+}
+
+#Hobbies{
+    text-align: center;
+}
+
+/*RESUME*/
+.professional-experiences, .contact, .work, .about{
+    margin-top: 10vh;
+}
+
+#skills{
+    display: flex;
+    justify-content: center;
+}
+
+#skills table{
+    margin: 50px;
 }
 
 #skills table {
@@ -139,8 +228,55 @@ progress {
     height: 15px;
 }
 
+/*WORK*/
 .project-card img{
     width: 400px;
     height: 200px;
     margin: 10px;
+}
+
+/*CONTACT*/
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.contact form{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 20px;
+}
+
+.contact form .email, .contact form .message{
+    grid-column: 1/ span 3;
+}
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    position: relative;
+
+
+}
+
+footer section{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>p{
+text-align: center;
+}
+
+#topButton{
+    position: fixed;
+    bottom: 20px; /* Distance du haut */
+    right: 20px; /* Distance de la droite */
+    font-size: 30px;
+}
+
+#goTop{
+    width: 10%;
 }
