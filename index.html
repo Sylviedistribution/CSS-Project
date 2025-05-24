@@ -1,82 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sylvestre, a passionate web developer ready to bring your web/app projects to life. Explore my work, projects, and more.">
+    <meta name="description"
+        content="Sylvestre, a passionate web developer ready to bring your web/app projects to life. Explore my work, projects, and more.">
     <link rel="shortcut icon" href="media/logo-favicon.png">
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
+    <div class="cursor-dot"></div>
+
     <header>
-        <img id="goTop" src="media/logo.png" alt/>
+        <h1></h1>
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.html" style="text-decoration: underline; color:white;">Home</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="index" style="text-decoration: underline; color:white;">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about">
-        
+    <section class="about" id="about">
+
         <div class="intro-container">
-            <p>Hi, I'm Sylvestre, a passionate web developer who loves to create beautiful, functional websites. I
+            <h3>SYLVESTRE IBOMBO GAKOSSO</h3>
+            <h1>Hi! I'm a software engineer</h1>
+            <p>I'm a developer who loves to create beautiful, functional websites. I
                 believe in designing experiences that not only look great but also function seamlessly.</p>
-
-            <div class="my_picture">
-                
+            <div class="follow">
+                <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank"
+                    class="fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Sylviedistribution" target="_blank" class="fa-brands fa-github"></a>
+                <a href="https://www.instagram.com/igs397/?hl=fr" target="_blank" class="fa-brands fa-instagram"></a>
             </div>
-
-            <p>Hi, I'm Sylvestre, a passionate web developer who loves to create beautiful, functional websites. I
-                believe in designing experiences that not only look great but also function seamlessly.</p>
         </div>
 
-        
-    </section>
-
-   
-
-    <h1>My Hobbies</h1>
-    <section id="Hobbies">
-        <div class="card" id="card1">
-            <div class="image">
-                <img src="https://uchi.imgix.net/general/anime2.png?crop=focalpoint&domain=uchi.imgix.net&fit=crop&fm=pjpg&fp-x=0.5&fp-y=0.5&h=558&ixlib=php-3.3.1&q=82&usm=20&w=992"
-                    class="product-image" />
+        <div class="cube-wrapper">
+            <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
             </div>
-            <h2 class="product-name">Manga/Anime</h2>
-            <p class="product-description">I love diving into captivating manga and anime stories that explore new
-                worlds and exciting adventures.</p>
-        </div>
-        <div class="card" id="card2">
-            <div class="image">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Wmg1Y3u2b82K-eH5D-B1A_NQOXGgWP0C6qb36DubO_veqx9Ce1Lhl-V3yFFC-KMr8QQ5TOMj-gCEiNi_o0gYv9ILaJCy9Q9aYJ_ID3sX9kPQSvtaHrAxvyYcdZ4lUljoONdfaZeCBS3x/s1600/latest-amazing-video-game-character-collage-youtube-hd-wallpaper-cool-collage-wallpaper-%255B1%255D.jpg"
-                    class="product-image" />
-            </div>
-            <h2 class="product-name">Video Games</h2>
-            <p class="product-description">Video games are an excellent way for me to unwind and challenge myself, often
-                exploring new realms and unique experiences.</p>
-        </div>
-        <div class="card" id="card3">
-            <div class="image">
-                <img src="https://media.istockphoto.com/id/2148071253/photo/chess-game-at-home-checkmate.jpg?s=612x612&w=0&k=20&c=sQNSGy2SVdA2UWizhOIA2z3xngIzfTUexXwsyw4tw9o="
-                    class="product-image" />
-            </div>
-            <h2 class="product-name">Chess</h2>
-            <p class="product-description">Chess is a game that stimulates the mind, enhancing my strategic thinking and
-                focus. I like it so much.</p>
         </div>
     </section>
 
-            <h1>Contact me</h1>
+    <section class="projects" id="projects">
+        <h3>Work</h3>
+        <h1>Recent projects</h1>
 
-    <section id="contact" class="contact">
+        <div class="caroussel-wrapper">
+            <button class="scroll-btn l" id="scrollLeft">◀</button>
+            <div id="caroussel">
+                <div class="card" id="eticket">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div>
+                                <img src="media/eticket.png" alt="E-ticket" />
+                            </div>
+                            <div class="project-name">
+                                <p>E-ticket Online Ticketing 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <ul>
+                                <li>
+                                    <span>HTML5</span>
+                                    <span><i class="fa-brands fa-html5"></i></span>
+                                </li>
+                                <li>
+                                    <span>CSS3</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                                </li>
+                                <li>
+                                    <span>React.js</span>
+                                    <span><i class="fa-brands fa-react"></i></span>
+                                </li>
+                                <li>
+                                    <span>Laravel</span>
+                                    <span><i class="fa-brands fa-laravel"></i></span>
+                                </li>
+                                <li>
+                                    <span>MySQL</span>
+                                    <span><i class="fa-solid fa-database"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="miadreams">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div>
+                                <img src="media/vitrine1.png" alt="Miadreams" />
+                            </div>
+                            <div class="project-name">
+                                <p>Miadreams 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <ul>
+                                <li>
+                                    <span>HTML5</span>
+                                    <span><i class="fa-brands fa-html5"></i></span>
+                                </li>
+                                <li>
+                                    <span>CSS3</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                                </li>
+                                <li>
+                                    <span>Bootstrap</span>
+                                    <span><i class="fa-brands fa-bootstrap"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="mprew">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div>
+                                <img src="media/mprew.jpg" alt="" />
+                            </div>
+                            <div class="project-name">
+                                <p>Ma Petite Robe En Wax 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <ul>
+                                <li>
+                                    <span>Laravel</span>
+                                    <span><i class="fa-brands fa-laravel"></i></span>
+                                </li>
+                                <li>
+                                    <span>Flutter</span>
+                                    <span><i class="fa-brands fa-flutter"></i></span>
+                                </li>
+                                <li>
+                                    <span>Figma</span>
+                                    <span><i class="fa-brands fa-figma"></i></span>
+                                </li>
+                                <li>
+                                    <span>MySQL</span>
+                                    <span><i class="fa-solid fa-database"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card" id="blog">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div>
+                                <img src="media/blog1.png" alt="" />
+                            </div>
+                            <div class="project-name">
+                                <p>Mini Blog 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <ul>
+                                <li>
+                                    <span>HTML5</span>
+                                    <span><i class="fa-brands fa-html5"></i></span>
+                                </li>
+                                <li>
+                                    <span>CSS3</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                                </li>
+                                <li>
+                                    <span>Bootstrap</span>
+                                    <span><i class="fa-brands fa-bootstrap"></i></span>
+                                </li>
+                                <li>
+                                    <span>Javascript</span>
+                                    <span><i class="fa-brands fa-js"></i></span>
+                                </li>
+                                <li>
+                                    <span>Laravel</span>
+                                    <span><i class="fa-brands fa-laravel"></i></span>
+                                </li>
+                                <li>
+                                    <span>MySQL</span>
+                                    <span><i class="fa-solid fa-database"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="ter">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div>
+                                <img src="media/ter4.png" alt="" />
+                            </div>
+                            <div class="project-name">
+                                <p>TER Reservation 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <ul>
+                                <li>
+                                    <span>HTML5</span>
+                                    <span><i class="fa-brands fa-html5"></i></span>
+                                </li>
+                                <li>
+                                    <span>CSS3</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i></span>
+                                </li>
+                                <li>
+                                    <span>Bootstrap</span>
+                                    <span><i class="fa-brands fa-bootstrap"></i></span>
+                                </li>
+                                <li>
+                                    <span>Javascript</span>
+                                    <span><i class="fa-brands fa-js"></i></span>
+                                </li>
+                                <li>
+                                    <span>Laravel</span>
+                                    <span><i class="fa-brands fa-laravel"></i></span>
+                                </li>
+                                <li>
+                                    <span>MySQL</span>
+                                    <span><i class="fa-solid fa-database"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <button class="scroll-btn r" id="scrollRight">▶</button>
+        </div>
+
+
+    </section>
+
+
+    <section class="services" id="services">
+        <h3>Services</h3>
+        <h1>Software services provided</h1>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-image webdev"></div>
+                <div class="description">
+                    <h4>Website Development</h4>
+                    <p>Responsive, modern, and SEO-friendly websites using HTML, CSS, JS, and frameworks like Laravel or
+                        React.</p>
+                </div>
+
+            </div>
+
+            <div class="service-card">
+                <div class="card-image ecommerce"></div>
+                <div class="description">
+                    <h4>E-commerce Solutions</h4>
+                    <p>Fully functional e-commerce platforms with secure payment integration and product management.</p>
+                </div>
+
+            </div>
+
+            <div class="service-card">
+                <div class="card-image mobileapp"></div>
+                <div class="description">
+                    <h4>Custom Web Applications</h4>
+                    <p>Tailor-made business apps like dashboards, ticketing systems, and real-time data platforms.</p>
+                </div>
+
+            </div>
+
+            <div class="service-card">
+                <div class="card-image api"></div>
+                <div class="description">
+                    <h4>API Integration</h4>
+                    <p>Connect your app to third-party services like Stripe, Paytech, or social login with secure APIs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="resume" id="resume">
+        <h3>Experience</h3>
+        <h1>Timeline</h1>
+        <div class="container">
+            <div class="timeline-left">
+                <div class="company-info">
+                    <div class="description-function">
+                        <h4>Ma Petite Robe En Wax</h4>
+                        <h3>Web/Mobile Devloper</h3>
+                        <ul>
+                            <li>Optimized MySQL queries (-25% execution time).</li>
+                            <li>Revamped mobile UI with Flutter (+50% improved UX).</li>
+                            <li>Fixed major bugs (-40% crash rate).</li>
+                        </ul>            
+                    </div>
+                    <img class="logo-company" src="media/logo-mia.png" alt="">
+                </div>
+                <div>
+                    <img class="mission" src="media/mission1.png" alt="">
+                </div>
+            </div>
+            <div id="timeline">
+                <div class="year">2022</div>
+                <div class="year">2024</div>
+            </div>
+            <div class="timeline-right">
+                <div>
+                    <img class="mission" src="media/mission.png" alt="">
+                </div>
+                <div class="company-info">
+                    <div class="description-function">
+                        <h4>Majorel</h4>
+                        <h3>Customer advisor</h3>
+                        <ul>
+                            <li>Managed customer requests and optimized response solutions.</li>
+                            <li>Reduced issue resolution time by 30%.</li>
+                        </ul>       
+                    </div>
+                    <img class="logo-company" src="media/majorel.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <span id="downloadResume"><a href="media/MY_RESUME.pdf" download="Fullstack_Resume">Download my resume </a></span>
+
+    <section class="contact" id="contact">
+        <h1>Contact me</h1>
 
         <form action="congrats.html" method="get">
             <div>
@@ -94,29 +372,34 @@
             <div class="message">
                 <label for="message">Message</label><br>
                 <textarea id="message" width="250px"></textarea><br>
-            </div> 
-            
+            </div>
+
             <button type="submit">Send</button>
         </form>
     </section>
 
-   <footer>
-    <a id="topButton" href="#goTop"><i class="bi bi-arrow-up-square-fill"></i></a>
-    <section>
-        <div>
-            <h2>Contact</h2>
-            <p>Email : <a href="mailto:sylvestre@groupeisi.com">monemail@contact.com</a></p>
-            <p>Phone: +221 77-867-89-90</p>
-        </div>
-        <div>
-            <h2>Suivez-moi</h2>
-            <a href="https://github.com/Sylviedistribution" target="_blank">GitHub</a><br>
-            <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank">LinkedIn</a>
-        </div>
-    </section>
-    <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre. Tous droits réservés </p>
 
-   </footer>
+    <footer>
+        <a id="topButton" href="#goTop"><i class="bi bi-arrow-up-square-fill"></i></a>
+        <section>
+            <div>
+                <h2>Contact</h2>
+                <p>Email : <a href="mailto:sylvestre@groupeisi.com">monemail@contact.com</a></p>
+                <p>Phone: +221 77-867-89-90</p>
+            </div>
+            <div>
+                <h2>Suivez-moi</h2>
+                <a href="https://github.com/Sylviedistribution" target="_blank">GitHub</a><br>
+                <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+        <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre. Tous droits réservés </p>
 
+    </footer>
+
+    <script src="script.js">
+
+    </script>
 </body>
+
 </html>
