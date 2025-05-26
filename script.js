@@ -60,22 +60,7 @@ function animate() {
 
 animate();
 
-//Animate content with scroll
-const targets = document.querySelectorAll('.box-to-animate');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.1 // déclenche à 10% visible
-});
-
-targets.forEach(target => observer.observe(target));
-
-//SCROLL NAVBAR
+//CHANGE BACKGROUND COULEUR NAVBAR 
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
@@ -96,7 +81,7 @@ document.getElementById("mprew").addEventListener("click", () => {
 });
 
 document.getElementById("miadreams").addEventListener("click", () => {
-  window.location.href = "https://github.com/Sylviedistribution/MiaDreams";
+  window.location.href = "https://mia-dreams.com/";
 });
 
 document.getElementById("blog").addEventListener("click", () => {
@@ -105,4 +90,12 @@ document.getElementById("blog").addEventListener("click", () => {
 
 document.getElementById("ter").addEventListener("click", () => {
   window.location.href = "https://github.com/Sylviedistribution/TER";
+});
+
+//SEND NOTIFICATION
+
+const sent = document.getElementById("send");
+sent.addEventListener("click", () => {
+    alert("✅ Message sent successfully!");
+
 });

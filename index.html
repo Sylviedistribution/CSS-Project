@@ -21,10 +21,10 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="index" style="text-decoration: underline; color:white;">Home</a></li>
+                <li><a href="#about" style="text-decoration: underline; color:white;">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -38,6 +38,7 @@
             <p>I'm a developer who loves to create beautiful, functional websites. I
                 believe in designing experiences that not only look great but also function seamlessly.</p>
             <div class="follow">
+                <span>Follow me <i class="fa-solid fa-arrow-right"></i> </span>
                 <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank"
                     class="fa-brands fa-linkedin"></a>
                 <a href="https://github.com/Sylviedistribution" target="_blank" class="fa-brands fa-github"></a>
@@ -308,14 +309,17 @@
     </section>
 
 
-    <section class="resume" id="resume">
+    <section class="experience" id="experience">
         <h3>Experience</h3>
         <h1>Timeline</h1>
         <div class="container">
             <div class="timeline-left">
                 <div class="company-info">
                     <div class="description-function">
-                        <h4>Ma Petite Robe En Wax</h4>
+                        <div class="namec-logo">
+                             <h4>Ma Petite Robe En Wax</h4>
+                            <img class="logo-mia" src="media/logo-mia.png" alt="">
+                        </div>
                         <h3>Web/Mobile Devloper</h3>
                         <ul>
                             <li>Optimized MySQL queries (-25% execution time).</li>
@@ -323,15 +327,14 @@
                             <li>Fixed major bugs (-40% crash rate).</li>
                         </ul>            
                     </div>
-                    <img class="logo-company" src="media/logo-mia.png" alt="">
                 </div>
                 <div>
                     <img class="mission" src="media/mission1.png" alt="">
                 </div>
             </div>
             <div id="timeline">
-                <div class="year">2022</div>
                 <div class="year">2024</div>
+                <div class="year">2022</div>
             </div>
             <div class="timeline-right">
                 <div>
@@ -339,14 +342,17 @@
                 </div>
                 <div class="company-info">
                     <div class="description-function">
-                        <h4>Majorel</h4>
+                        <div class="namec-logo">
+                            <h4>Majorel</h4>
+                            <img class="logo-majorel" src="media/majorel.png" alt="">
+                        </div>
+                       
                         <h3>Customer advisor</h3>
                         <ul>
                             <li>Managed customer requests and optimized response solutions.</li>
                             <li>Reduced issue resolution time by 30%.</li>
                         </ul>       
                     </div>
-                    <img class="logo-company" src="media/majorel.png" alt="">
                 </div>
             </div>
         </div>
@@ -356,44 +362,47 @@
     <section class="contact" id="contact">
         <h1>Contact me</h1>
 
-        <form action="congrats.html" method="get">
+        <form action="">
             <div>
                 <label for="firstname">Firstname:</label><br>
-                <input id="firstname" type="text"><br>
+                <input id="firstname" type="text" placeholder="John"><br>
             </div>
             <div>
                 <label for="lastname">Lastname</label><br>
-                <input id="lastname" type="text"><br>
+                <input id="lastname" type="text" placeholder="Doe"><br>
             </div>
             <div class="email">
                 <label for="email">Email</label><br>
-                <input id="email" type="email"><br>
+                <input id="email" type="email" placeholder="johndoe@gmail.com"><br>
             </div>
             <div class="message">
                 <label for="message">Message</label><br>
-                <textarea id="message" width="250px"></textarea><br>
+                <textarea id="message"></textarea><br>
             </div>
 
-            <button type="submit">Send</button>
+            <div class="send">
+                <button type="submit" id="send">Send</button>
+            </div>
         </form>
     </section>
 
 
     <footer>
-        <a id="topButton" href="#goTop"><i class="bi bi-arrow-up-square-fill"></i></a>
+        <a id="topButton" class="fa-solid fa-arrow-up" href="#about"></a>
         <section>
             <div>
                 <h2>Contact</h2>
-                <p>Email : <a href="mailto:sylvestre@groupeisi.com">monemail@contact.com</a></p>
-                <p>Phone: +221 77-867-89-90</p>
+                <a href="mailto:isylvestre757@gmail.com">Email : isylvestre757@gmail.com</a>
+                <p>Phone: +221 77-849-63-48</p>
             </div>
             <div>
-                <h2>Suivez-moi</h2>
-                <a href="https://github.com/Sylviedistribution" target="_blank">GitHub</a><br>
+                <h2>Follow me</h2>
                 <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Sylviedistribution" target="_blank">Github</a> 
+                <a href="https://www.instagram.com/igs397/?hl=fr" target="_blank">Instagram</a>
             </div>
         </section>
-        <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre. Tous droits réservés </p>
+        <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre.  All right reserved </p>
 
     </footer>
 
