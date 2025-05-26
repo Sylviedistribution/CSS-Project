@@ -4,10 +4,13 @@
     --linear: (to right, #00353F, #00353F, #1e90ff);
 }
 
+
 * {
     text-decoration: none;
     margin: 0;
     scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+
 }
 
 body {
@@ -457,6 +460,7 @@ header img {
     flex: 1;
     background-color: white;
     border-radius: 10px;
+    min-width: min-content;
 }
 
 .card-image {
@@ -697,10 +701,33 @@ footer>p {
     background-color: var(--primary-color);
 }
 
-@media (max-width: 740px) {
 
-  .content {
-    flex-direction: column;
-    gap: 10px;
+@media (max-width: 768px) {
+  .intro-container h1 {
+    font-size: 24px;
   }
-} 
+
+  .card {
+    min-width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cube-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
