@@ -21,7 +21,7 @@
     <header>
         <h1></h1>
 
-        <nav class="navbar">
+        <nav class="navbar" id="mobileMenu">
             <ul>
                 <li><a href="#about" style="text-decoration: underline; color:white;">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,6 +30,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+       <i id="menuToggle" class="fa-solid fa-bars"></i>
+
     </header>
 
     <section class="about" id="about">
@@ -61,7 +63,7 @@
     </section>
 
     <section class="projects" id="projects">
-        <h3>Work</h3>
+        <h3>Projects</h3>
         <h1>Recent projects</h1>
 
         <div class="caroussel-wrapper">
@@ -358,8 +360,8 @@
                 </div>
             </div>
         </div>
+        <span id="downloadResume"><a href="media/MY_RESUME.pdf" download="Fullstack_Resume">Download my resume </a></span>
     </section>
-    <span id="downloadResume"><a href="media/MY_RESUME.pdf" download="Fullstack_Resume">Download my resume </a></span>
 
     <section class="contact" id="contact">
         <h1>Contact me</h1>
@@ -388,25 +390,26 @@
         </form>
     </section>
 
-
-    <footer>
-        <a id="topButton" class="fa-solid fa-arrow-up" href="#about"></a>
-        <section>
-            <div>
-                <h2>Contact</h2>
-                <a href="mailto:isylvestre757@gmail.com">Email : isylvestre757@gmail.com</a>
-                <p>Phone: +221 77-849-63-48</p>
+    <section class="footer">
+        <footer>
+            <a id="topButton" class="fa-solid fa-arrow-up" href="#about"></a>
+            <div class="footer-content">
+                <div>
+                    <h2>Contact</h2>
+                    <a href="mailto:isylvestre757@gmail.com">Email : isylvestre757@gmail.com</a>
+                    <p>Phone: +221 77-849-63-48</p>
+                </div>
+                <div>
+                    <h2>Follow me</h2>
+                    <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Sylviedistribution" target="_blank">Github</a> 
+                    <a href="https://www.instagram.com/igs397/?hl=fr" target="_blank">Instagram</a>
+                </div>
             </div>
-            <div>
-                <h2>Follow me</h2>
-                <a href="https://www.linkedin.com/in/sylvestre-ibombo-gakosso-568510220/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Sylviedistribution" target="_blank">Github</a> 
-                <a href="https://www.instagram.com/igs397/?hl=fr" target="_blank">Instagram</a>
-            </div>
-        </section>
-        <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre.  All right reserved </p>
-
-    </footer>
+            <p>&copy; Copyright 2025 | IBOMBO GAKOSSO Sylvestre.  All right reserved </p>
+        </footer>
+    </section>
+  
 
     <script src="script.js">
 

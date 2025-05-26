@@ -36,6 +36,10 @@ h1 {
     font-size: 50px;
 }
 
+section h1{
+    margin: 5px 0;
+}
+
 section>h3 {
     background-color: var(--secondary-color);
     border-radius: 7px;
@@ -60,8 +64,7 @@ header {
     justify-content: space-between;
     background-color: var(--secondary-color);
     height: 8vh;
-    box-shadow: 0 1px 5px black;
-    /*x y flou color*/
+    box-shadow: 0 1px 5px black; /*x y flou color*/
     position: fixed;
     transition: background-color 0.4s ease, box-shadow 0.3s ease;
     z-index: 1000;
@@ -102,6 +105,12 @@ header img {
     text-decoration: underline;
 }
 
+.fa-bars, .fa-xmark{
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    opacity: 0;
+}
 
 /*INDEX*/
 .about {
@@ -296,12 +305,10 @@ header img {
     /* Rotates 90° downward around X-axis and moves 100px forward */
 }
 
-/*WORK*/
+/*PROJECT*/
 .projects {
     height: 70vh;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    z-index: 10;
 }
 
 .caroussel-wrapper {
@@ -317,6 +324,7 @@ header img {
     align-items: center;
     gap: 10px;
     overflow: hidden;
+    width: 100%;
 }
 
 .scroll-btn {
@@ -450,6 +458,10 @@ header img {
 }
 
 /*SERVICES*/
+.services{
+    width: 100%
+}
+
 .services-grid {
     display: flex;
     flex-wrap: wrap;
@@ -460,7 +472,6 @@ header img {
     flex: 1;
     background-color: white;
     border-radius: 10px;
-    min-width: min-content;
 }
 
 .card-image {
@@ -470,30 +481,28 @@ header img {
     width: 100%;
     height: 250px;
     border-radius: 8px 8px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .webdev {
     background-image: url("../media/webdev.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+   
 }
 
 .ecommerce {
     background-image: url("../media/ecommerce.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+   
 }
 
 .mobileapp {
     background-image: url("../media/mobile\ app.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  
 }
 
 .api {
     background-image: url("../media/api.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  
 }
 
 .description{
@@ -589,6 +598,7 @@ header img {
   display: flex;
   justify-content: center; /* Centrage horizontal */
   margin-top: 20px;
+  width: 100%;
 }
 
 #downloadResume a {
@@ -605,6 +615,7 @@ header img {
 #downloadResume a:hover {
   background-color: #0056b3;
 }
+
 #downloadResume:hover{
     background-color: #00353F;
 
@@ -623,6 +634,7 @@ header img {
     background-size: cover;
     height: 500px;
     background-repeat: no-repeat;
+    border-radius: 5px;
 }
 
 
@@ -637,13 +649,21 @@ header img {
 .contact input, .contact textarea, .contact button {
     width: 100%;
     border: none;
+    border-radius: 3px;
 
 }
 
 .contact input, .contact button{
     height: 25px;
+    transition: background-color 0.5s;
 }
 
+.contact button:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    color: white;
+
+}
 .contact textarea{
     min-height: 50px;
     min-height: 80px;
@@ -663,22 +683,20 @@ header img {
 
 /*FOOTER*/
 footer {
-  position: relative;
   width: 100%;
   height: 180px;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-footer section {
+.footer-content {
     display: flex;
     justify-content: space-around;
     margin: auto 0;
     color:white;
 }
-footer section *{
+.footer-content  *{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -691,43 +709,148 @@ footer>p {
 #topButton {
     position: fixed;
     bottom: 20px;
-    /* Distance du haut */
     right: 20px;
-    /* Distance de la droite */
     font-size: 30px;
     color: white;
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 
-@media (max-width: 768px) {
-  .intro-container h1 {
-    font-size: 24px;
-  }
+@media (max-width: 1024px) {
 
-  .card {
-    min-width: 90%;
+  section{
+    margin: 5vh 50px 0 50px;
   }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 5px;
-  }
-
+  
   .services-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
   }
 
-  .timeline-left,
-  .timeline-right {
-    flex-direction: column;
-    align-items: center;
+  .cube-wrapper{
+    margin-top: 50px;
   }
 
-  .cube-wrapper {
-    width: 250px;
-    height: 250px;
+  .projects{
+    width: 1000px;
   }
+  
+}
+
+@media (max-width: 768px) {
+    
+    section{
+        margin: 5vh 50px 0 50px;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 8vh; /* sous le header */
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .navbar.show {
+        display: block;
+    }
+
+    .navbar ul{
+        display: block;
+        text-align: right
+    }
+    
+     #menuToggle {
+        opacity: 1;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    /*ABOUT*/
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1000px   
+     }
+
+    .intro-container p {
+        width: 100vw;
+    }
+
+     .cube-wrapper {
+        width: 200px;
+        height: 200px;
+        perspective: 800px;
+    }
+
+    .cube {
+        width: 200px;
+        height: 200px;
+    }
+
+    .face {
+        width: 200px;
+        height: 200px;
+    }
+
+   .front {
+    transform: translateZ(100px);
+    }
+
+    .back {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    /*SERVICES*/
+  
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .experience, .services-grid, .contact, .footer {
+        width: 950px;
+    }
+
+}
+
+  @media (max-width: 426px) {
+     section{
+        margin: 15vh 50px 0 50px;
+    }
+
+    .services h1{
+        width:1000px;
+    }
+
 }

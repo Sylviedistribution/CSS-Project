@@ -71,6 +71,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//BACON MENU
+const bacon = document.querySelector("bacon");
+const navbar = document.getElementsByClassName("navbar")
+
+
+
 //Redirect route
 document.getElementById("eticket").addEventListener("click", () => {
   window.location.href = "https://github.com/Sylviedistribution/ticket-france-eclair";
@@ -99,3 +105,22 @@ sent.addEventListener("click", () => {
     alert("✅ Message sent successfully!");
 
 });
+
+//MENU TOGGLE
+ const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let isOpen = false;
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+    isOpen = !isOpen;
+
+    // Toggle icon : burger ↔ close
+    if (isOpen) {
+      menuToggle.classList.remove('fa-bars');
+      menuToggle.classList.add('fa-xmark'); // croix
+    } else {
+      menuToggle.classList.remove('fa-xmark');
+      menuToggle.classList.add('fa-bars'); // burger
+    }
+  });
