@@ -15,6 +15,7 @@
 
 body {
     background-color: var(--primary-color);
+    -webkit-overflow-scrolling: touch;
 
 }
 
@@ -231,7 +232,7 @@ header img {
     height: 300px;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotate 20s infinite 1.5s  linear ;
+    animation: rotate 20s infinite linear ;
     animation-play-state: paused;
 }
 
@@ -265,14 +266,14 @@ header img {
 
 /* Position each face of the cube */
 .front {
-    background-image: url("../media/my_picture.png");
+    background-image: url("../media/my_picture.webp");
     background-size: cover;
     transform: translateZ(150px);
     /* Moves the front face 100px towards the viewer */
 }
 
 .back {
-    background-image: url("../media/my_picture1.png");
+    background-image: url("../media/my_picture1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotateY(180deg) translateZ(150px);
@@ -280,7 +281,7 @@ header img {
 }
 
 .right {
-    background-image: url("../media/my_picture2.png");
+    background-image: url("../media/my_picture2.webp");
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotateY(90deg) translateZ(150px);
@@ -288,14 +289,14 @@ header img {
 }
 
 .left {
-    background-image: url("../media/my_picture3.png");
+    background-image: url("../media/my_picture3.webp");
     background-size: cover;
     transform: rotateY(-90deg) translateZ(150px);
     /* Rotates 90° left around Y-axis and moves 100px forward */
 }
 
 .top {
-    background-image: url("../media/my_picture4.png");
+    background-image: url("../media/my_picture4.webp");
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotateX(90deg) translateZ(150px);
@@ -303,7 +304,7 @@ header img {
 }
 
 .bottom {
-    background-image: url("../media/my_picture5.png");
+    background-image: url("../media/my_picture5.webp");
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotateX(-90deg) translateZ(150px);
@@ -489,22 +490,22 @@ header img {
 }
 
 .webdev {
-    background-image: url("../media/webdev.jpg");
+    background-image: url("../media/webdev.webp");
    
 }
 
 .ecommerce {
-    background-image: url("../media/ecommerce.jpg");
+    background-image: url("../media/ecommerce.webp");
    
 }
 
 .mobileapp {
-    background-image: url("../media/mobile\ app.jpg");
+    background-image: url("../media/mobile\ app.webp");
   
 }
 
 .api {
-    background-image: url("../media/api.jpg");
+    background-image: url("../media/api.webp");
   
 }
 
@@ -632,7 +633,7 @@ header img {
     align-items: center;
     color: white;
     margin-bottom: 20px;
-    background-image: url("../media/contact.jpg");
+    background-image: url("../media/contact.webp");
     background-attachment: fixed;
     background-size: cover;
     height: 500px;
@@ -691,18 +692,19 @@ footer {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
+
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
     margin: auto 0;
-    color:white;
 }
 .footer-content  *{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color:white;
 }
 
 footer>p {
@@ -718,6 +720,23 @@ footer>p {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--secondary-color);
+}
+
+/* Scrollbar pour Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 
