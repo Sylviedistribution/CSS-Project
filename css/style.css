@@ -417,6 +417,7 @@ header img {
     background-color: var(--secondary-color);
     color: white;
     transform: rotateY(180deg);
+    font-size: 20px;
 }
 
 .card-back ul {
@@ -633,6 +634,8 @@ header img {
     color: white;
     margin-bottom: 20px;
     background-image: url("../media/contact.webp");
+    background-color: rgba(0, 0, 0, 0.5); /* couche sombre */
+    background-blend-mode: darken; /* ou multiply */
     background-attachment: fixed;
     background-size: cover;
     height: 500px;
@@ -646,7 +649,6 @@ header img {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     width: 500px; 
-    color: black;
 }
 
 .contact input, .contact textarea, .contact button {
@@ -679,7 +681,6 @@ header img {
 }
 
 #send{
-    
     justify-self: center;
 }
 
@@ -814,12 +815,17 @@ footer>p {
         align-items: center;
      }
 
+    .intro-container{
+        margin: 0 7px 20px 7px;
+    }
+
     .intro-container p {
         width: 100%;
     }
 
+
      .cube-wrapper {
-        margin-top: 15px;
+        margin-top: 10px;
         width: 200px;
         height: 200px;
         perspective: 800px;
@@ -872,8 +878,8 @@ footer>p {
         text-align: center;
         color: white;
         margin-top: 20px;
+        padding: 0 10px;
         font-size: 18px;
-        z-index: 200;
 
     }
    
@@ -884,26 +890,28 @@ footer>p {
         justify-content: center;
         text-align: center;
         color: white;
-        margin-top: 20px;
+        margin-top: 50px;
         font-size: 18px;
-        z-index: 200;
-
     }
-   
+
+    .card-back ul li {
+        margin: 7px 0;
+        font-size: 2rem;
+    }
+
+    .card-back ul i {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 426px) {
 
     section{
-        margin: 70px 0 0 0;
+        margin: 90px 0 0 0;
     }
     
-     .about h1{
+    .about h1{
         font-size: 33px;
-    }
-
-    .intro-container{
-        margin: 0 7px;
     }
 
     .experience{
@@ -923,37 +931,35 @@ footer>p {
         width: 90%; 
     }
 
-      .services-grid {
+    .services-grid {
         grid-template-columns: 1fr;
     } 
-    
-    .description-function{
-        position: relative;
-    }
 
     .experience ul{
         position: relative;
-        padding: 0;
-        width: 130px;
+    }
+
+     #topButton {
+        bottom: 40px;
+        right: 7px;
+        font-size: 25px;
     }
 }
 
 @media screen and (max-width: 376px) {
 
-
      h1{
         font-size: 40px;
     }
 
-    #topButton {
-        bottom: 10px;
-        right: 10px;
-    }
-
-
     .caroussel-wrapper {
         padding: 0 10px;
     }
+
+     .year{
+        padding: 15px 7px;
+    }
+
 
 }
 
@@ -973,9 +979,29 @@ footer>p {
         text-align: justify;
     }
 
+    .container{
+        height: 400px;
+    }
+
     #topButton {
         bottom: 0px;
         right: 0px;
     }
+
+    .logo-mia{
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-majorel{
+        width: 60px;
+        height: 60px;
+    }
+
+     .mission{
+        height: 110px;
+    }
+
+  
 }
 
