@@ -866,7 +866,7 @@ footer>p {
     }    
 
      .projects::after {
-        content: "Click once to be directed to the project and double click to see the stack.";
+        content: "Click once to be directed to the project and press and hold to see the stack.";
         display: flex;
         justify-content: center;
         text-align: center;
@@ -900,6 +900,10 @@ footer>p {
     
      .about h1{
         font-size: 33px;
+    }
+
+    .intro-container{
+        margin: 0 7px;
     }
 
     .experience{
