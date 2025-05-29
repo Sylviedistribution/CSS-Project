@@ -1,7 +1,6 @@
 :root {
     --primary-color: #00353F;
     --secondary-color: #4A919E;
-    --linear: (to right, #00353F, #00353F, #1e90ff);
 }
 
 
@@ -207,8 +206,6 @@ header img {
     display: flex;
     justify-content: center; 
     align-items: center;   
-    width: 100%;
-    height: 100vh;
     perspective: 1000px;
     width: 400px;
     height: 400px;
@@ -315,12 +312,13 @@ header img {
 .projects {
     height: 70vh;
     z-index: 10;
+    max-width: 100%;
+
 }
 
 .caroussel-wrapper {
     position: relative;
     display: flex;
-    max-width: 100%;
     padding: 0 50px;
 }
 
@@ -328,7 +326,7 @@ header img {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     overflow: hidden;
     width: 100%;
 }
@@ -464,7 +462,9 @@ header img {
 }
 
 /*SERVICES*/
-
+.services{
+    position: relative;
+}
 
 .services-grid {
     display: flex;
@@ -522,7 +522,6 @@ header img {
     display: flex;
     justify-content: space-around;
     background-color: var(--secondary-color) ;
-    background-attachment: fixed;
     height: 80vh;
     color: white;
     border-radius: 5px;
@@ -593,7 +592,7 @@ header img {
 }
 
 .mission{
-    width: 300px;
+    width: 100%;
     height: 200px;
     border-radius: 5px;
 }
@@ -742,40 +741,49 @@ footer>p {
 
 @media (max-width: 1024px) {
 
-  section{
-    margin: 5vh 50px 0 50px;
-  }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-    justify-items: center;
-  }
+    section{
+        margin: 5vh 50px 0 50px;
+    }
+    
+    .card {
+        flex: 0 0 300px;
+        height: 300px;
+    }
 
-  .cube-wrapper{
-    margin-top: 50px;
-  }
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        justify-items: center;
+    }
+    
+    .cursor-dot{
+        display: none;
+    }
 
-  .projects{
-    width: 1000px;
-  }
-  
+    .contact {
+        background-attachment: scroll !important;
+    }
+
+
 }
 
 @media screen and (max-width: 768px) {
+  
+    .about h1{
+        margin: 0;
     
-    section{
-        margin: 5vh 50px 0 50px;
+    }
+    .about p{
+        text-align: justify;
     }
 
     .navbar {
         display: none;
         position: absolute;
         top: 8vh; /* sous le header */
-        left: 0;
-        width: 100%;
+        right: 0;
         background-color: var(--secondary-color);
         flex-direction: column;
         align-items: center;
@@ -798,20 +806,20 @@ footer>p {
         cursor: pointer;
         z-index: 1000;
     }
-
+   
     /*ABOUT*/
     .about{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 1000px   
      }
 
     .intro-container p {
-        width: 100vw;
+        width: 100%;
     }
 
      .cube-wrapper {
+        margin-top: 15px;
         width: 200px;
         height: 200px;
         perspective: 800px;
@@ -854,30 +862,100 @@ footer>p {
     /*SERVICES*/
   
     .services-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }    
+
+     .projects::after {
+        content: "Cliquez une fois pour être dirigé vers le projet et double cliquez pour voir la stack";
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 30px;
+        font-size: 18px;
+        z-index: 200;
+
+    }
+   
+}
+
+@media screen and (max-width: 426px) {
+
+    section{
+        margin: 70px 0 0 0;
+    }
+    
+     .about h1{
+        font-size: 33px;
     }
 
-    .experience, .services-grid, .contact, .footer {
-        width: 950px;
+    .experience{
+        font-size: 11px;
+    } 
+
+    .mission{
+        width: 120px;
+        height: 150px;
     }
-    /*CONTACT*/
-    .contact {
-    background-attachment: scroll !important;
+
+    .year{
+        padding: 20px 15px;
+    }
+
+    .contact form {
+        width: 90%; 
+    }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+    } 
+    
 
 }
 
-}
+@media screen and (max-width: 376px) {
 
-  @media screen and (max-width: 426px) {
-     section{
-        margin: 15vh 50px 0 50px;
+    .about h1{
+        font-size: 40px;
     }
 
-    .services h1{
-        width:1000px;
+    #topButton {
+        bottom: 10px;
+        right: 10px;
+    }
+
+
+    .caroussel-wrapper {
+        padding: 0 10px;
     }
 
 }
+
+@media screen and (max-width: 321px) {
+
+    h1{
+        font-size: 40px;
+    }
+
+    .about h1{
+        font-size: 30px;
+    }
+
+
+
+    .about p, .about span{
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .about span{
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    #topButton {
+        bottom: 0px;
+        right: 0px;
+    }
+}
+

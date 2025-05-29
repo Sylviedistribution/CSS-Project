@@ -1,6 +1,6 @@
 //CAROUSSEL
 const carousel = document.getElementById("caroussel");
-const scrollAmount = 600;
+const scrollAmount = 320;
 
 const btnLeft = document.getElementById("scrollLeft");
 const btnRight = document.getElementById("scrollRight");
