@@ -863,6 +863,11 @@ footer>p {
     .experience, .services-grid, .contact, .footer {
         width: 950px;
     }
+    /*CONTACT*/
+    .contact {
+    background-attachment: scroll !important;
+
+}
 
 }
 
