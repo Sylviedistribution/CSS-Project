@@ -866,12 +866,25 @@ footer>p {
     }    
 
      .projects::after {
-        content: "Cliquez une fois pour être dirigé vers le projet et double cliquez pour voir la stack";
+        content: "Click once to be directed to the project and double click to see the stack.";
         display: flex;
         justify-content: center;
         text-align: center;
         color: white;
-        margin-top: 30px;
+        margin-top: 20px;
+        font-size: 18px;
+        z-index: 200;
+
+    }
+   
+    .about::after {
+        content: "Click on me.";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
         font-size: 18px;
         z-index: 200;
 
@@ -910,12 +923,21 @@ footer>p {
         grid-template-columns: 1fr;
     } 
     
+    .description-function{
+        position: relative;
+    }
 
+    .experience ul{
+        position: relative;
+        padding: 0;
+        width: 130px;
+    }
 }
 
 @media screen and (max-width: 376px) {
 
-    .about h1{
+
+     h1{
         font-size: 40px;
     }
 
@@ -933,15 +955,9 @@ footer>p {
 
 @media screen and (max-width: 321px) {
 
-    h1{
-        font-size: 40px;
-    }
-
     .about h1{
         font-size: 30px;
     }
-
-
 
     .about p, .about span{
         font-size: 16px;
